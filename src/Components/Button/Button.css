@@ -1,0 +1,14 @@
+.button {
+    background-color: #008CFF;
+    width: 150px;
+    border-radius: 15px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #e8e6e3;
+    align-items: center;
+    justify-content: center;
+}

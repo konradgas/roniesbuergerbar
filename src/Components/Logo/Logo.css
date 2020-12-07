@@ -1,0 +1,27 @@
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.logo-initial {
+    margin-top: 0;
+    margin-left: 5vw;
+    width: 35px;
+    text-align: center;
+    padding: 0.2vw;
+    background-color: #008CFF;
+}
+
+.logo-followup {
+    width: 10%;
+    padding-left: 1px;
+}
+
+@media (max-width: 400px) {
+    .logo-followup {
+        width: 30%;
+        padding-left: 0;
+    }
+}
+
