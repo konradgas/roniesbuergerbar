@@ -6,7 +6,6 @@
 
 .logo-initial {
     margin-top: 0;
-    margin-left: 5vw;
     width: 35px;
     text-align: center;
     padding: 0.2vw;
@@ -14,13 +13,13 @@
 }
 
 .logo-followup {
-    width: 10%;
+    width: 50%;
     padding-left: 1px;
 }
 
 @media (max-width: 400px) {
     .logo-followup {
-        width: 30%;
+        width: 35%;
         padding-left: 0;
     }
 }

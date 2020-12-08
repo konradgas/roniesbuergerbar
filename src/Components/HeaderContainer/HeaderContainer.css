@@ -1,0 +1,22 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 5vw;
+}
+
+.login-button {
+    margin-right: 2vw;
+}
+
+@media (max-width: 400px) {
+    .header-container {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .login-button {
+        margin-right: 10vw;
+    }
+}

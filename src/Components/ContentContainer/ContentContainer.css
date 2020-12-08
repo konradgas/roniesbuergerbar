@@ -1,0 +1,15 @@
+.content-container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 400px) {
+    .content-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+}

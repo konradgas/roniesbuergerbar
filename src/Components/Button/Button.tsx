@@ -4,9 +4,13 @@ import './Button.css';
 interface ILoginButtonProps {
     label: string;
     className?: string;
-    onClick?: Function;
+    onClick: Function;
 }
 
 export const Button: FC<ILoginButtonProps> = (props ) => {
-    return <button className={`button ${props.className}`}><p className="label">{props.label}</p></button>
+    return <button className={`button ${props.className}`} onClick={() => props.onClick()}>
+        <p className="label">
+            {props.label}
+        </p>
+    </button>
 }

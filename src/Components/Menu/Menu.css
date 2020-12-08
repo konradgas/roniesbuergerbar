@@ -1,0 +1,22 @@
+.burger-list {
+    list-style: none;
+}
+
+.add-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin: 1vw;
+    line-height: 0;
+}
+
+.menu-container_header {
+    color: aquamarine;
+}
+
+@media (max-width: 400px) {
+    .menu-container {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}

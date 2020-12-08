@@ -1,1 +1,15 @@
-#google-map-id { margin: 5vw;}
+.google-map { margin: 5vw;}
+#ronnie-map {
+    width: 450px;
+    height: 350px;
+}
+
+@media (max-width: 400px) {
+    #ronnie-map {
+        width: 300px;
+        height: 350px;
+    }
+    .google-map {
+        text-align: center;
+    }
+}

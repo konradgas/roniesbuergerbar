@@ -1,0 +1,39 @@
+.address-details {
+    margin-top: 7vh;
+    width: 20%;
+}
+
+.address-details_header {
+    margin-bottom: 5vh;
+
+}
+
+.address-details_subheader {
+    color: aquamarine;
+}
+
+.address-details_text {
+    line-height: 5vh;
+}
+
+@media (max-width: 400px) {
+    .address-details {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .address-details_subheader {
+        margin-left: 10vw;
+
+    }
+
+    .address-details_header {
+        margin-left: 5vh;
+
+    }
+
+    .address-details_text {
+        padding: 0 0 0 10%;
+        line-height: 5vh;
+    }
+}
