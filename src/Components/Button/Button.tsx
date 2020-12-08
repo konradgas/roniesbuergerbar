@@ -8,7 +8,7 @@ interface ILoginButtonProps {
 }
 
 export const Button: FC<ILoginButtonProps> = (props ) => {
-    return <button className={`button ${props.className}`} onClick={() => props.onClick()}>
+    return <button className={`button ${props.className}`} onClick={(item) => props.onClick(item)}>
         <p className="label">
             {props.label}
         </p>
