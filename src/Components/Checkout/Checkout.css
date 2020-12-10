@@ -1,0 +1,56 @@
+.checkout-modal {
+    display: flex;
+    flex-direction: column;
+    background-color: #181a1b;
+    border: 2px solid #e8e6e3;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    overflow: scroll;
+    margin-top: 6vh;
+    margin-right: 4.6vw;
+    padding: 10px;
+}
+
+.checkout-modal_input {
+    background: #181a1b;
+    margin-bottom: 2vh;
+}
+
+.pay-button-disabled {
+    background-color: gray;
+    opacity: 70%;
+}
+
+.checkout-list_item {
+    margin: 5vh;
+}
+
+.checkout-modal_cancel-button {
+    margin-left: 10vw;
+}
+
+.checkout-modal_button-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 400px) {
+    .checkout-modal {
+        display: flex;
+        flex-direction: column;
+        background-color: #181a1b;
+        border: 2px solid #e8e6e3;
+        width: 350px;
+        height: 350px;
+        position: fixed;
+        margin: 2vw;
+        overflow: scroll;
+    }
+
+    .checkout-modal_button-container {
+        margin: 5vh;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}

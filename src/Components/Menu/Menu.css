@@ -1,4 +1,17 @@
+.menu-container {
+    margin-top: 4vw;
+    margin-left: 5vw;
+}
+
 .burger-list {
+    list-style: none;
+}
+
+.sides-list {
+    list-style: none;
+}
+
+.drinks-list {
     list-style: none;
 }
 
@@ -16,6 +29,8 @@
 
 @media (max-width: 400px) {
     .menu-container {
+        margin-top: 0;
+        margin-left: 0;
         padding-left: 10vw;
         padding-right: 10vw;
     }
