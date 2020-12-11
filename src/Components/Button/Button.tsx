@@ -13,7 +13,10 @@ export const Button: FC<ILoginButtonProps> = (props) => {
     return (
       <button
         className={`button ${props.className}`}
-        onClick={() => (props.onClick ? props.onClick() : null)}
+        onClick={(e) => {
+          e.preventDefault();
+          return props.onClick ? props.onClick() : null
+        }}
         data-testid="button-component"
       >
         <p className="label">{props.label}</p>

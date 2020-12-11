@@ -6,6 +6,7 @@ import "./HeaderContainer.css";
 interface IHeaderContainerProps {
   cartItemCount: number;
   onCartButtonClick: Function;
+    onLoginButtonClick: Function;
 }
 
 export const HeaderContainer: FC<IHeaderContainerProps> = (props) => {
@@ -13,7 +14,7 @@ export const HeaderContainer: FC<IHeaderContainerProps> = (props) => {
     <div className="header-container">
       <Logo />
       <div className="button-set">
-        <Button label="Login" className="login-button" onClick={() => {}} />
+        <Button label="Login" className="login-button" onClick={props.onLoginButtonClick} />
         <Button
           label={`Cart(${props.cartItemCount})`}
           className="cart-button"

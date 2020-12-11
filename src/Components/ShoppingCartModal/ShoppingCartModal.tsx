@@ -60,6 +60,6 @@ export const ShoppingCartModal: FC<IShoppingCartModalProps> = (props) => {
       </div>
     );
   } else {
-    return <Checkout items={props.itemsAdded} switchToCart={switchToCart} />;
+    return <Checkout total={props.cartTotal} items={props.itemsAdded} switchToCart={switchToCart} />;
   }
 };

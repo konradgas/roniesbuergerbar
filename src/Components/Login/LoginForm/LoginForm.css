@@ -1,4 +1,4 @@
-.checkout-modal {
+.login-form-modal {
     display: flex;
     flex-direction: column;
     background-color: #181a1b;
@@ -11,31 +11,32 @@
     margin-right: 100px;
 }
 
-.checkout-modal_input {
-    background: #181a1b;
-    margin-bottom: 2vh;
+.login-form-modal_form {
+    display: flex;
+    flex-direction: column;
 }
 
-.pay-button-disabled {
-    background-color: gray;
-    opacity: 70%;
+.login-form-modal_input {
+    margin: 10px;
 }
 
-.checkout-list_item {
-    margin: 5vh;
+.login-form-button {
+    margin: 10px;
 }
 
-.checkout-modal_cancel-button {
-    margin-left: 10vw;
-}
-
-.checkout-modal_button-container {
+.close-container {
     display: flex;
     flex-direction: row-reverse;
 }
 
-@media (max-width: 400px) {
-    .checkout-modal {
+.login-form-modal_close {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 500px) {
+    .login-form-modal {
         display: flex;
         flex-direction: column;
         background-color: #181a1b;
@@ -45,11 +46,5 @@
         position: fixed;
         margin: 2vw;
         overflow: scroll;
-    }
-
-    .checkout-modal_button-container {
-        margin: 5vh;
-        display: flex;
-        flex-direction: row-reverse;
     }
 }
