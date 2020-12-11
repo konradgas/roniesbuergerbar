@@ -14,8 +14,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-Additionally I have included server run to happen before application so it so  \
-application can run with just one command.
+Additionally I have included server run to happen before application it's so  \
+application can run with just one command npm run start in console from the project directory.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 ### `npm test`
 
