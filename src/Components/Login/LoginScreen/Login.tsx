@@ -25,6 +25,19 @@ export const Login: FC<ILoginProps> = (props) => {
         setIsSignin(!isSignin);
     }
 
+    const handleOnLogin = () => {
+        fetch('http://localhost:3001/api/login', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                username: name,
+                password: password
+            })
+        }).then((res: Response) => res.json()).then((json) => {
+            console.log(json);
+        })
+    }
+
     if (isSignin) {
         return <LoginForm handleSwitchToLogin={handleSwitchToSignIn} />
     } else
@@ -52,7 +65,7 @@ export const Login: FC<ILoginProps> = (props) => {
                 required
             />
             <div>
-                <Button label="login"/>
+                <Button label="login" onClick={handleOnLogin}/>
                 <Button label="Sign in" onClick={handleSwitchToSignIn}/>
             </div>
             </div>)}
