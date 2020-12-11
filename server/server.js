@@ -42,14 +42,14 @@ app.get("/api/menu", (req, res, next) => {
 app.post("/api/order/send", (req, res) => {
   const { body } = req;
   // Read nad update json file with new order
-  fs.readFile('../public/order.json', 'utf8', (err, data) =>{
+  fs.readFile('../public/orders.json', 'utf8', (err, data) =>{
     if (err){
       console.log(err);
     } else {
       const order = JSON.parse(data);
       order.push(body);
       const json = JSON.stringify(order);
-      fs.writeFile('../public/order.json', json, 'utf8', () => {
+      fs.writeFile('../public/orders.json', json, 'utf8', () => {
         console.log("file updated successfully")
       });
     }});
