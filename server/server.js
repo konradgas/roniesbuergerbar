@@ -14,19 +14,23 @@ app.use(bodyParser.json());
 app.use(express.static('../public'));
 
 // check if order.json file exists if not create one
-fs.readFile('../public/order.json', 'utf8', (err) => {
-  if (err && err.errno === -4058) {
-      console.log('File order.json not found creating...');
-      fs.writeFile('../public/order.json', "[]", 'utf8', () => {console.log('initial order json file created')})
-    }
-});
-
-fs.readFile('../public/users.json', 'utf8', (err) => {
-  if (err && err.errno === -4058) {
-    console.log('File users.json not found creating...');
-    fs.writeFile('../public/users.json', "[]", 'utf8', () => {console.log('initial users json file created')})
+try {
+  if (fs.existsSync('../public/order.json')) {
+    console.log("order json file exists");
   }
-});
+} catch(err) {
+  console.log('order file does not exist, creating...')
+  fs.writeFile('../public/order.json', "[]", 'utf8', () => {console.log('initial order json file created')})
+}
+
+try {
+  if (fs.existsSync('../public/users.json')) {
+    console.log("users json file exists");
+  }
+} catch(err) {
+  console.log('Ussers file does not exist, creating...')
+  fs.writeFile('../public/order.json', "[]", 'utf8', () => {console.log('initial order json file created')})
+}
 
 app.get("/api/menu", (req, res, next) => {
   fs.readFile('../public/menu.json', 'utf8', (err, data) => {
@@ -45,7 +49,7 @@ app.post("/api/order/send", (req, res) => {
       order.push(body);
       const json = JSON.stringify(order);
       fs.writeFile('../public/order.json', json, 'utf8', () => {
-        console.log("file updated succesfully")
+        console.log("file updated successfully")
       });
     }});
   // TO DO fix and connect to mongoDB
@@ -89,6 +93,7 @@ app.post("/api/order/send", (req, res) => {
 
 app.post("/api/login/singin", (req, res) => {
   const {body} = req;
+  const { password } = body;
   // Read nad update json file with new order
   fs.readFile('../public/users.json', 'utf8', (err, data) => {
     if (err) {
@@ -98,7 +103,7 @@ app.post("/api/login/singin", (req, res) => {
       order.push(body);
       const json = JSON.stringify(order);
       fs.writeFile('../public/users.json', json, 'utf8', () => {
-        console.log("file updated succesfully")
+        console.log("users file updated succesfully")
       });
     }
   });

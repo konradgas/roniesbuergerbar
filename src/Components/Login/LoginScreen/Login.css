@@ -1,4 +1,4 @@
-.login-form-modal {
+.login-modal {
     display: flex;
     flex-direction: column;
     background-color: #181a1b;
@@ -11,20 +11,25 @@
     margin-right: 100px;
 }
 
-.login-form-modal_form {
+.login-modal_form {
     display: flex;
     flex-direction: column;
 }
 
-.login-form-modal_input {
+.login-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-modal_input {
     margin: 10px;
 }
 
-.login-form-button {
+.login-button {
     margin: 5vh 10px 10px;
 }
 
-.login-form-button-disabled {
+.login-button-disabled {
     margin: 10px;
     background-color: gray;
 }
@@ -39,14 +44,14 @@
     flex-direction: row-reverse;
 }
 
-.login-form-modal_close {
+.login-modal_close {
     margin: 10px;
     width: 50px;
     height: 50px;
 }
 
 @media (max-width: 500px) {
-    .login-form-modal {
+    .login-modal {
         display: flex;
         flex-direction: column;
         background-color: #181a1b;
@@ -58,7 +63,7 @@
         overflow: scroll;
     }
 
-    .login-form-button {
+    .login-button {
         margin: 7vh 10px 10px;
     }
 }

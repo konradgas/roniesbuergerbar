@@ -59,7 +59,7 @@ export const Checkout: FC<ICheckout> = (props) => {
         <Button
           label={`Cancel`}
           className="checkout-modal_cancel-button"
-          onClick={props.switchToCart}
+          onClick={(e: React.ChangeEvent<HTMLInputElement>) => props.switchToCart(e)}
         />
         <Button
           label={`Order`}

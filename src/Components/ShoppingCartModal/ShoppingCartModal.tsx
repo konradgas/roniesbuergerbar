@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import React, { FC, useState } from "react";
 import "./ShoppingCartModal.css";
 import { Button } from "../Button/Button";
 import { idGenerator } from "../../service/idGenerator";
@@ -30,7 +30,7 @@ export const ShoppingCartModal: FC<IShoppingCartModalProps> = (props) => {
           <Button
             label="X"
             className="cart-modal_close"
-            onClick={props.onModalCloseClick}
+            onClick={(e: React.ChangeEvent<HTMLInputElement>) => props.onModalCloseClick(e)}
           />
           <Button
             label={`Checkout`}

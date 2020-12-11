@@ -3,7 +3,7 @@ import {Button} from "../../Button/Button";
 import './LoginForm.css';
 
 interface ILoginFormProps {
-    onModalCloseClick: Function;
+    handleSwitchToLogin: Function
 }
 
 export const LoginForm: FC<ILoginFormProps> = (props) => {
@@ -28,12 +28,12 @@ export const LoginForm: FC<ILoginFormProps> = (props) => {
         if (password !== repeatPassword) {
             setPasswordValidation('invalid');
         } else {
-            setPassword('valid');
+            setPasswordValidation('valid');
         }
     }, [password, repeatPassword])
 
     const onCreateAccountClicked = async () => {
-        await fetch("http://localhost:3001/api/order/send", {
+        await fetch("http://localhost:3001/api/login/singin", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -52,11 +52,6 @@ export const LoginForm: FC<ILoginFormProps> = (props) => {
     }
 
     return <div className="login-form-modal">
-        <div className="close-container"><Button
-            label="X"
-            className="login-form-modal_close"
-            onClick={props.onModalCloseClick}
-        /></div>
             <div className="login-form-modal_form">
                 <input
                     className="login-form-modal_input"
@@ -80,10 +75,11 @@ export const LoginForm: FC<ILoginFormProps> = (props) => {
                     required
                 />{displayValidationMessage()}
                 { passwordValidation === 'valid' &&
-                    <Button className="login-form-button" label="create account"/>}
+                    <Button className="login-form-button" label="create account" onClick={onCreateAccountClicked}/>}
 
                 { passwordValidation === 'invalid' &&
-                <Button className="login-form-button-disabled" label="create account"/>}
+                <Button className="login-form-button-disabled" label="create account" disabled={true}/>}
+                <Button label="cancel" className="login-form-cancel-button" onClick={(e: React.ChangeEvent<HTMLInputElement>) => props.handleSwitchToLogin(e)}/>
             </div>
     </div>
 }
