@@ -49,7 +49,7 @@ app.post("/api/order/send", (req, res) => {
       const order = JSON.parse(data);
       order.push(body);
       const json = JSON.stringify(order);
-      fs.writeFile('../public/orders.json', json, 'utf8', () => {
+      fs.writeFile('public/orders.json', json, 'utf8', () => {
         console.log("file updated successfully")
       });
     }});
