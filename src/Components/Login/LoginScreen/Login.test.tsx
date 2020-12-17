@@ -1,5 +1,6 @@
 import {render} from "@testing-library/react";
 import {Login} from "./Login";
+import React from "react";
 
 
 describe("LoginForm test suite", () => {

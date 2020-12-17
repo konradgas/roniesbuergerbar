@@ -1,5 +1,5 @@
 import './AddressDetails.css'
-import {FC} from "react";
+import React, {FC} from "react";
 
 export const AddressDetails: FC = () => {
     return <div className="address-details">

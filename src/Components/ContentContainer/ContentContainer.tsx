@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { GoogleMap } from "../GoogleMap/GoogleMap";
 import "./ContentContainer.css";
 import { AddressDetails } from "../AddressDetails/AddressDetails";

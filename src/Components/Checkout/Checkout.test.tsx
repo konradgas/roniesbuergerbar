@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import { Checkout } from "./Checkout";
+import React from "react";
 
 describe("Checkout test suite", () => {
   const checkoutProps = {
@@ -10,6 +11,7 @@ describe("Checkout test suite", () => {
         price: 0.0,
       },
     ],
+    total: 0,
     switchToCart: jest.fn(),
   };
   test("Checkout renders correctly", () => {
@@ -17,6 +19,7 @@ describe("Checkout test suite", () => {
       <Checkout
         items={checkoutProps.items}
         switchToCart={checkoutProps.switchToCart}
+        total={checkoutProps.total}
       />
     );
     expect(container).not.toBeNull();

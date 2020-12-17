@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import React from "react";
 import { Menu } from "./Menu";
 
 describe("Menu test suire", () => {

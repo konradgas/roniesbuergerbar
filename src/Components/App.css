@@ -1,0 +1,19 @@
+.App-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-form-modal-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-modal-container {
+    display: flex;
+    justify-content: flex-end;
+}

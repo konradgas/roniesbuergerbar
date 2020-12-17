@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import "./Menu.css";
 import { Button } from "../Button/Button";
 import { idGenerator } from "../../service/idGenerator";
