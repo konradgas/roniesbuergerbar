@@ -1,10 +1,19 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The application does contain server in the same repository therefore it will require to be running on separate url when deployed 
+to avoid confusing application.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+
+### `npm server`
+
+Runs the server with nodemon that makes it re-run the server when changes are detected, useful in development. Also running server first is needed for application to work.
+It is using the json files to save and access information, if the files are not detected the proper one will be created on server run. It will NOT create files when already running with nodemon.
+Runs on port: [http://localhost:3001](http://localhost:3001)
 
 ### `npm start`
 
@@ -13,10 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-Additionally I have included server run to happen before application it's so  \
-application can run with just one command npm run start in console from the project directory.
-Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 ### `npm test`
 
