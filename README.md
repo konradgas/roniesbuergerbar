@@ -8,6 +8,10 @@ to avoid confusing application.
 
 In the project directory, you can run:
 
+### `npm install`
+
+When just cloned repository from github the npm install will be required to be run both in root and server directory.
+
 
 ### `npm server`
 

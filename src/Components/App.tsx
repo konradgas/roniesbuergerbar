@@ -30,7 +30,7 @@ const App: FC = () => {
       })
       .then((menuJson) => {
         setMenuData(menuJson);
-      });
+      }).catch(e => console.error(e));
   };
 
   useEffect(() => {

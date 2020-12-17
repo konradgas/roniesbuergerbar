@@ -34,7 +34,7 @@ try {
 }
 
 app.get("/api/menu", (req, res, next) => {
-  fs.readFile('../public/menu.json', 'utf8', (err, data) => {
+  fs.readFile('public/menu.json', 'utf8', (err, data) => {
     res.send(data);
   });
 });
@@ -42,7 +42,7 @@ app.get("/api/menu", (req, res, next) => {
 app.post("/api/order/send", (req, res) => {
   const { body } = req;
   // Read nad update json file with new order
-  fs.readFile('../public/orders.json', 'utf8', (err, data) =>{
+  fs.readFile('public/orders.json', 'utf8', (err, data) =>{
     if (err){
       console.log(err);
     } else {
@@ -98,7 +98,7 @@ app.post("/api/login/singin", (req, res) => {
   // Hash password
 
   // Read and update json file with new order
-  fs.readFile('../public/users.json', 'utf8', (err, data) => {
+  fs.readFile('public/users.json', 'utf8', (err, data) => {
     if (err) {
       console.log(err);
     } else {
@@ -109,7 +109,7 @@ app.post("/api/login/singin", (req, res) => {
           password: hash
         });
         const json = JSON.stringify(users);
-        fs.writeFile('../public/users.json', json, 'utf8', () => {
+        fs.writeFile('public/users.json', json, 'utf8', () => {
           console.log("users file updated successfully")
         });
       })
@@ -123,7 +123,7 @@ app.post("/api/login", (req, res) => {
   // Hash password
   // Read and update json file with new order
   res.send(
-      fs.readFile('../public/users.json', 'utf8', (err, data) => {
+      fs.readFile('public/users.json', 'utf8', (err, data) => {
         if (err) {
           console.log(err);
         } else {
